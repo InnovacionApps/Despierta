@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="@string/navigation_subheader">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/navigation_sub_item_1"
+                    android:icon="@mipmap/login"
+                    android:title="@string/navigation_sub_item_1"/>
+                <item
+                    android:id="@+id/navigation_sub_item_2"
+                    android:icon="@mipmap/perfil"
+                    android:title="@string/navigation_sub_item_2"/>
+            </group>
+
+                <item
+                    android:id="@+id/navigation_sub_item_3"
+                    android:icon="@drawable/ic_setting_dark"
+                    android:title="@string/navigation_sub_item_3"/>
+                <item
+                    android:id="@+id/navigation_sub_item_4"
+                    android:icon="@mipmap/ic_info_white_48dp"
+                    android:title="@string/navigation_sub_item_4"/>
+        </menu>
+    </item>
+</menu>

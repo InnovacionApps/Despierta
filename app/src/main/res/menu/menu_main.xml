@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/ic_buscar_24dp_azul"
+        android:orderInCategory="101"
+        android:title="@string/search_hint"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/notificacion"
+        android:title="notificaciones"
+        android:actionLayout="@layout/toolbar_notificacion"
+        android:icon="@mipmap/ic_perfil_24dp_azul"
+        app:showAsAction="always" />
+
+
+</menu>

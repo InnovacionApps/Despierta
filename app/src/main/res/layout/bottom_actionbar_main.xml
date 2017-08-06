@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="#2196F3"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:layout_gravity="bottom">
+
+    <com.targetapps.despierta.view.BottomActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

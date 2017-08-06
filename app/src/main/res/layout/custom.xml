@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_custom"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_above="@+id/btminimizar"
+        android:layout_toLeftOf="@+id/btminimizar"
+        android:layout_toStartOf="@+id/btminimizar"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp" />
+
+    <Button
+        android:id="@+id/btsalir"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:layout_marginEnd="47dp"
+        android:text="Salir"
+        android:layout_alignTop="@+id/btminimizar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btminimizar"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimizar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/texto"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btsalir"
+        android:layout_toStartOf="@+id/btsalir" />
+
+</RelativeLayout>

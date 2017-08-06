@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#2196F3">
+
+    <Button
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_boton_buscar"
+        android:background="@color/transparent"
+        android:height="60dp"
+        android:width="120dp"
+        android:paddingRight="10sp"
+        android:drawablePadding="-10sp"
+        android:textColor="#FFF"
+        android:id="@+id/bottom_action_button"
+        android:text="Buscar Amigos"
+        android:textSize="10dp"
+        android:onClick="BuscarA"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_boton_solicitud"
+        android:background="@color/transparent"
+        android:height="60dp"
+        android:width="120dp"
+        android:drawablePadding="-1sp"
+        android:text="Mis Solicitudes"
+        android:id="@+id/bottom_action_button2"
+        android:textSize="10dp"
+        android:onClick="mSolicitudes"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bottom_action_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

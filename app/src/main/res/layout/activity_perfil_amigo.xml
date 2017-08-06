@@ -1,0 +1,196 @@
+<RelativeLayout
+    android:background="#EEEEEE"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+         <ImageView
+            android:id="@+id/background_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-100dp"
+            android:contentDescription="@null"
+            android:scaleType="fitStart"
+            android:src="@mipmap/scrollview_header" />
+
+        <com.targetapps.despierta.widget.PullScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:headerHeight="300dp"
+            app:headerVisibleHeight="100dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/scroll_view_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="120dp"
+                    style="@style/Base.TextAppearance.AppCompat.Medium">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="27dp"
+                        android:background="@color/white"
+                        android:id="@+id/relativeLayout">
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar Amigo"
+                            android:id="@+id/button"
+                            android:onClick="AgregarAmigo"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/colorPrimary"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_marginTop="5dp" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ubicar"
+                            android:id="@+id/btnUbicar"
+                            android:layout_alignLeft="@+id/button"
+                            android:layout_marginLeft="-120dp"
+                            android:background="@color/colorPrimary"
+                            android:paddingRight="5dp"
+                            android:paddingLeft="5dp"
+                            android:layout_marginTop="5dp" />
+
+                    </RelativeLayout>
+
+                    <com.facebook.login.widget.ProfilePictureView
+                        android:id="@+id/imagen_perfil_amigo"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:padding="1px"
+                        android:background="@android:color/white"
+                        android:layout_marginLeft="21dp"
+                        android:contentDescription="@null"/>
+
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:shadowColor="@android:color/black"
+                        android:shadowDx="3.0"
+                        android:shadowDy="3.0"
+                        android:shadowRadius="5.0"
+                        android:text="@string/user_name"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:layout_toRightOf="@+id/imagen_perfil_amigo" />
+
+                    <FrameLayout
+                        android:id="@+id/user_divider_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imagen_perfil_amigo"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginRight="21dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@null"
+                            android:background="#DFDFDF" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="29dp"
+                            android:contentDescription="@null"
+                            android:src="@mipmap/arrow_up" />
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_below="@+id/toolbar"
+                            tools:context="com.targetphoneapps.despierta.MapsActivity" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="0dp"
+                        android:background="@color/white"
+                        android:layout_below="@+id/relativeLayout"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true">
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:text="Enviar mi ubicacion"
+                            android:id="@+id/btnEnviar"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rutas Compartidas"
+                            android:id="@+id/textView6"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="10dp" />
+
+                        <ListView
+                            android:layout_width="wrap_content"
+                            android:layout_height="275dp"
+                            android:id="@+id/lvSolicitud"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/textView6"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_marginBottom="55dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.targetapps.despierta.widget.PullScrollView>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark" />
+
+</RelativeLayout>
+
+</RelativeLayout>
